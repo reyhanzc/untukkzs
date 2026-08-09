@@ -1,0 +1,309 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffeef3,#f7f7ff);
+    overflow:hidden;
+}
+
+/* ===========================
+   PARTICLE
+=========================== */
+
+#particles{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.snow{
+    position:absolute;
+    top:-20px;
+    background:white;
+    border-radius:50%;
+    animation:snow linear infinite;
+}
+
+@keyframes snow{
+
+    from{
+        transform:translateY(-20px);
+    }
+
+    to{
+        transform:translateY(110vh);
+    }
+
+}
+
+/* ===========================
+   COVER
+=========================== */
+
+#cover{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffdce6,#ffeef5);
+    transition:.8s;
+    z-index:100;
+}
+
+#cover.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.cover-box{
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.cover-box h3{
+    color:#ff5d8f;
+    margin-bottom:15px;
+}
+
+.cover-box h1{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.cover-box p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.cover-box button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff5d8f;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.cover-box button:hover{
+    transform:scale(1.05);
+    background:#ff3b77;
+}
+
+/* ===========================
+   SLIDER
+=========================== */
+
+#slider{
+    width:100%;
+    height:100vh;
+    display:none;
+    position:relative;
+}
+
+/* ===========================
+   SLIDE
+=========================== */
+
+.slide{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:opacity .8s ease;
+}
+
+.slide.active{
+    opacity:1;
+    visibility:visible;
+}
+
+/* ===========================
+   FOTO
+=========================== */
+
+.slide img{
+
+    width:340px;
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    margin-bottom:30px;
+
+    transition:.4s;
+
+}
+
+.slide img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+   CAPTION
+=========================== */
+
+.caption{
+
+    width:85%;
+    max-width:700px;
+
+    text-align:center;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.caption h2{
+
+    color:#ff4d88;
+
+    margin-bottom:15px;
+
+}
+
+.caption p{
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.nav{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:25px;
+
+    z-index:50;
+
+}
+
+.nav button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff5d8f;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+.nav button:hover{
+
+    transform:scale(1.1);
+
+    background:#ff3b77;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.cover-box{
+
+    width:90%;
+
+}
+
+.slide img{
+
+    width:250px;
+
+    height:330px;
+
+}
+
+.caption{
+
+    width:90%;
+
+}
+
+.caption h2{
+
+    font-size:22px;
+
+}
+
+.caption p{
+
+    font-size:15px;
+
+}
+
+.nav button{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+}
